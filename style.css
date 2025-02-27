@@ -22,7 +22,7 @@
 .pipe{ 
     position: absolute;
     bottom: 0;
-    width: 160px;
+    width: 200px;
     animation: pipe-animation 2s infinite linear; 
 }
 
@@ -34,7 +34,7 @@
 
 .jump {
 
-    animation: jump 500ms ease-out;
+    animation: jump 1000ms ease-out;
 }
 
 .clouds {
@@ -101,7 +101,7 @@
     }
 
     40%{
-        bottom: 200px;
+        bottom: 220px;
     }
 
     50%{
@@ -141,4 +141,33 @@
         right: 100%;
     }
 
+}
+
+
+@media (max-width: 768px) {
+    .game-board {
+        height: 90vh;
+    }
+
+    .donkey {
+        width: 120px; 
+    }
+
+    .pipe {
+        width: 100px; 
+    }
+
+    .clouds {
+        width: 300px; 
+    }
+
+    .score-board {
+        font-size: 14px; 
+        padding: 8px 12px;
+    }
+
+    #restart-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
 }

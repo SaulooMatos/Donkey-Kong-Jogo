@@ -35,7 +35,7 @@ const jump = () => {
 
     setTimeout(() => {
         donkey.classList.remove('jump');    
-    }, 500);
+    }, 1000); 
 
     jumps++;
     updateScore();
@@ -58,7 +58,8 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const donkeyPosition = +window.getComputedStyle(donkey).bottom.replace('px', '');
 
-    if (pipePosition < 180 && pipePosition > 0 && donkeyPosition < 80) {
+    
+    if (pipePosition < 100 && pipePosition > 0 && donkeyPosition < 60) { 
         isGameOver = true; 
         pipe.style.animation = 'none'; 
         pipe.style.left = `${pipePosition}px`; 
@@ -71,11 +72,9 @@ const loop = setInterval(() => {
         donkey.style.marginLeft = '50px';
         donkey.style.objectFit = 'contain';
         donkey.style.transform = 'scale(1.2)';
-    
-        
+
         restartScreen.style.display = 'flex'; 
     }
-    
 }, 10);
 
 document.getElementById('restart-btn').addEventListener('click', () => {
